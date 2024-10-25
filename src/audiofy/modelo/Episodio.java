@@ -1,17 +1,17 @@
 package audiofy.modelo;
 
-public class Episodio {
+public class Episodio extends Podcast {
     private String nomeEpisodio;
     private int numeroEpisodio;
     private int temporada;
     private int duracaoEpisodio;
-    private Podcast podcast;
+    private String podcast;
 
-    public Podcast getPodcast() {
+    public String getPodcast() {
         return podcast;
     }
 
-    public void setPodcast(Podcast podcast) {
+    public void setPodcast(String podcast) {
         this.podcast = podcast;
     }
 
@@ -45,5 +45,17 @@ public class Episodio {
 
     public void setDuracaoEpisodio(int duracaoEpisodio) {
         this.duracaoEpisodio = duracaoEpisodio;
+    }
+
+    @Override
+    public void exibeFichaTecnica() {
+        System.out.println("****************************************");
+        System.out.println(nomeEpisodio);
+        System.out.println("Episódio nº" + numeroEpisodio);
+        System.out.println("Do "+ podcast);
+        System.out.println(getAutor());
+        System.out.println(getDuracaoEpisodio() + " minutos");
+        System.out.println("Uma produção " + getProdutora());
+        System.out.println("****************************************");
     }
 }

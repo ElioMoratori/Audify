@@ -5,6 +5,7 @@ public class Musica extends Audio {
     private String artista;
     private int anoLancamento;
 
+
     public String getArtista() {
         return artista;
     }
@@ -27,4 +28,5 @@ public class Musica extends Audio {
         System.out.println(getArtista());
         System.out.println("Lançado em " + getAnoLancamento());
     }
+
 }

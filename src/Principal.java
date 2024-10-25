@@ -1,3 +1,4 @@
+import audiofy.modelo.Episodio;
 import audiofy.modelo.Musica;
 import audiofy.modelo.Podcast;
 
@@ -27,6 +28,18 @@ public class Principal {
 
 
         podcast.exibeFichaTecnica();
+
+        // Configurando um episódio de podcast
+        Episodio episodio = new Episodio();
+
+        episodio.setPodcast(podcast.getTitulo());
+        episodio.setDuracaoEpisodio(60);
+        episodio.setNumeroEpisodio(592);
+        episodio.setNomeEpisodio("Poder!");
+        episodio.setProdutora(podcast.getProdutora());
+        episodio.setAutor(podcast.getAutor());
+
+        episodio.exibeFichaTecnica();
 
     }
 }
